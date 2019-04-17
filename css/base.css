@@ -28,20 +28,39 @@ main {
   text-align: center;
 }
 
-img {
-  height: 350px;
-  width: 350px;
-  float: right;
+.image {
+  width: calc(33.33% - 30px);
+  height: 500px;
+  box-sizing: border-box;
+  float: left;
   margin: 15px;
-  position: relative;
-  right: 10%;
 
   border-radius: 3px;
-  /* display: inline-block; */
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   transition: transform 400ms ease-out;
 }
 
-img:hover {
+.image h2 {
+  font-size: 2em;
+  text-decoration: underline;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+
+img {  
+  height: 350px;
+  width: 350px;
+}
+
+.image p {
+  box-sizing: inherit;
+  padding: 5px 15px 0;
+  font-size: 1.2em;
+  height: 100px;
+  line-height: 1.4em;
+}
+
+.image:hover {
   transform: scale(1.1);
 }
