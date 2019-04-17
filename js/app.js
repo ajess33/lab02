@@ -8,8 +8,10 @@ $.get('../data/page1.json', (data) => {
   });
 });
 
+console.log(Image.all);
+
 function Image(image) {
-  this.imageUrl = image.imageUrl;
+  this.imageUrl = image.image_url;
   this.title = image.title;
   this.description = image.description;
   this.keyword = image.keyword;
