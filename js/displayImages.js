@@ -1,12 +1,11 @@
 'use strict';
 
 $(document).ready(() => {
-  const doc = $(document);
   const generateImage = (image) => {
-    const imageContainer = doc.createElement('section');
-    const imageTitle = doc.createElement('h2');
-    const imageImg = doc.createElement('img');
-    const imageDescription = doc.createElement('p');
+    const imageContainer = document.createElement('section');
+    const imageTitle = document.createElement('h2');
+    const imageImg = document.createElement('img');
+    const imageDescription = document.createElement('p');
 
     $(imageContainer).addClass('image');
     $(imageContainer).attr({
@@ -23,7 +22,7 @@ $(document).ready(() => {
     imageContainer.appendChild(imageTitle.cloneNode());
     imageContainer.appendChild(imageImg.cloneNode());
     imageContainer.appendChild(imageDescription.cloneNode());
-    $('main').appendChild(imageContainer);
+    document.getElementsByTagName('main')[0].appendChild(imageContainer);
   };
   Image.all.forEach(image => generateImage(image));
 });

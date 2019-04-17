@@ -6,7 +6,7 @@ $.get('../data/page1.json', (data) => {
   data.forEach((image) => {
     new Image(image);
   });
-});
+}, 'json');
 
 console.log(Image.all);
 
