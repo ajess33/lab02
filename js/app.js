@@ -21,4 +21,3 @@ function Image(image) {
   this.horns = image.horns;
   Image.all.push(this);
 }
-console.log(Image.all);

@@ -19,9 +19,9 @@ $(document).ready(() => {
     });
     $(imageDescription).text(image.description);
 
-    imageContainer.appendChild(imageTitle.cloneNode());
-    imageContainer.appendChild(imageImg.cloneNode());
-    imageContainer.appendChild(imageDescription.cloneNode());
+    imageContainer.appendChild(imageTitle.cloneNode(true));
+    imageContainer.appendChild(imageImg.cloneNode(true));
+    imageContainer.appendChild(imageDescription.cloneNode(true));
     document.getElementsByTagName('main')[0].appendChild(imageContainer);
   };
   Image.all.forEach(image => generateImage(image));
