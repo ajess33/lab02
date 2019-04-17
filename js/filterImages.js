@@ -5,7 +5,7 @@ $(document).ready(() => {
   const filterOption = document.createElement('option');
   const options = [];
   $.get(
-    '../data/page1.json',
+    './data/page1.json',
     data => {
       data.forEach(image => {
         !options.includes(image.keyword) ? options.push(image.keyword) : '';
