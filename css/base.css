@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  font-family: 'Nunito', sans-serif;
 }
 
 header {
@@ -8,8 +7,8 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-family: 'Righteous', cursive;
 }
 
 header select {
