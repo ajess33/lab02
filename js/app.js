@@ -2,13 +2,16 @@
 
 Image.all = [];
 
-$.get('../data/page1.json', (data) => {
-  data.forEach((image) => {
-    new Image(image);
-  });
-});
-
-console.log(Image.all);
+// populate the images on page load
+$.get(
+  '../data/page1.json',
+  (data) => {
+    data.forEach((image) => {
+      new Image(image);
+    });
+  },
+  'json'
+);
 
 function Image(image) {
   this.imageUrl = image.image_url;
@@ -18,3 +21,4 @@ function Image(image) {
   this.horns = image.horns;
   Image.all.push(this);
 }
+console.log(Image.all);
