@@ -4,7 +4,7 @@ Image.all = [];
 
 // populate the images on page load
 $.get(
-  './../data/page1.json',
+  './data/page1.json',
   (data) => {
     data.forEach((image) => {
       new Image(image);
@@ -21,4 +21,3 @@ function Image(image) {
   this.horns = image.horns;
   Image.all.push(this);
 }
-console.log(Image.all);
