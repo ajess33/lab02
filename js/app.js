@@ -2,11 +2,19 @@
 
 Image.all = [];
 
-function Image(imageUrl, title, description, keyword, horns) {
-  this.imageUrl = imageUrl;
-  this.title = title;
-  this.description = description;
-  this.keyword = keyword;
-  this.horns = horns;
+$.get('../data/page1.json', (data) => {
+  data.forEach((image) => {
+    new Image(image);
+  });
+});
+
+console.log(Image.all);
+
+function Image(image) {
+  this.imageUrl = image.image_url;
+  this.title = image.title;
+  this.description = image.description;
+  this.keyword = image.keyword;
+  this.horns = image.horns;
   Image.all.push(this);
 }
