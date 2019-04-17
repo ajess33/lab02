@@ -12,13 +12,13 @@ $(document).ready(() => {
       });
     },
     'json'
-  ).done(() => options.forEach(option => $(filterOption).clone().attr('value', option).text(option).appendTo(filter)));
+  ).done(() => options.forEach(option => $(filterOption).clone().attr('value', option).text(option).appendTo('#filter optgroup:first')));
 
   filter.on('change', () => {
     Object.values($('.image')).forEach(image => {
       if (filter[0].selectedIndex === 0) {
         $(image).show();
-      } else if ($(image).attr('data-keyword') !== $('#filter option:selected').text()) {
+      } else if ($(image).attr('data-keyword') !== $('#filter option:selected').text() && filter[0].selectedIndex < $('#filter option').length - 4) {
         $(image).hide();
       } else {
         $(image).show();
