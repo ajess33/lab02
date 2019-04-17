@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+}
+
+header {
+  margin: 100px auto;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-family: 'Righteous', cursive;
+}
+
+header select {
+  margin: 40px 0 0 0;
+  font-size: 1.5rem;
+  height: 40px;
+  width: 250px;
+  text-align: center;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  overflow: auto;
+  padding-top: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+img {
+  height: 350px;
+  width: 350px;
+  float: right;
+  margin: 15px;
+  position: relative;
+  right: 10%;
+
+  border-radius: 3px;
+  /* display: inline-block; */
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  transition: transform 400ms ease-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
