@@ -38,13 +38,13 @@ Actual time needed to complete: 45 minutes
 
 Number and name of feature: Sort The Images
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 1 hour
 
-Start time:
+Start time: 5:00
 
-Finish time:
+Finish time: 6:00
 
-Actual time needed to complete:
+Actual time needed to complete: 1 hour
 
 ---
 
