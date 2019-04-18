@@ -4,15 +4,8 @@ $(document).ready(() => {
   const filter = $('#filter');
   const filterOption = document.createElement('option');
   const options = [];
-  $.get(
-    './data/page1.json',
-    data => {
-      data.forEach(image => {
-        !options.includes(image.keyword) ? options.push(image.keyword) : '';
-      });
-    },
-    'json'
-  ).done(() => options.forEach(option => $(filterOption).clone().attr('value', option).text(option).appendTo('#filter optgroup:first')));
+  Image.all.forEach(image => !options.includes(image.keyword) ? options.push(image.keyword) : '');
+  options.forEach(option => $(filterOption).clone().attr('value', option).text(option).appendTo('#filter optgroup:first'));
 
   const sortImages = (filterValue) => {
     if (filterValue === 'a-to-z') {
