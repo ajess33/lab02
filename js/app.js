@@ -13,6 +13,12 @@ $.get(
   'json'
 );
 
+$.get('./data/page2.json', (data) => {
+  data.forEach((image) => {
+    new Image(image);
+  });
+});
+
 function Image(image) {
   this.imageUrl = image.image_url;
   this.title = image.title;
