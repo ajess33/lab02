@@ -36,8 +36,13 @@ const generateImage = (image) => {
     horns: image.horns
   };
 
-  console.log(imageData);
-
   let html = templateScript(imageData);
   $('main').append(html);
 };
+
+// const showModule = (e) => {
+//   console.log(e);
+//   // const image = `<img src=${e.target.imageUrl}`
+// };
+
+$('img').click((e) => console.log(e.target));
