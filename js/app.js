@@ -30,9 +30,10 @@ $.when(
   for (let i = 0; i < Math.ceil(Image.all.length / 10); i++) {
     $(page).text((i+1));
     $(page).attr('href', `#${$(page).text()}`);
+    $(page).attr('data-images', `[${i * 10}, ${i * 10 + 10}]`);
     $(pagNav).append(page.cloneNode(true));
   }
-});
+}).then(() => $('.page-link').click(paginate));
 
 
 
