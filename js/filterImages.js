@@ -7,6 +7,18 @@ $(document).ready(() => {
   Image.all.forEach(image => !options.includes(image.keyword) ? options.push(image.keyword) : '');
   options.forEach(option => $(filterOption).clone().attr('value', option).text(option).appendTo('#filter optgroup:first'));
 
+  const filterImages = (selectedOption) => {
+    Object.values($('.image')).forEach(image => {
+      if (selectedOption === 'default') {
+        $(image).show();
+      } else if ($(image).attr('data-keyword') !== $('#filter option:selected').text()) {
+        $(image).hide();
+      } else {
+        $(image).show();
+      }
+    });
+  };
+
   const sortImages = (filterValue) => {
     if (filterValue === 'a-to-z') {
       Image.all.sort((a, b) => a.title.localeCompare(b.title));
@@ -20,24 +32,16 @@ $(document).ready(() => {
   };
 
   sortImages('a-to-z');
-  Image.all.forEach(image => generateImage(image));
+  Image.all.slice(0, 10).forEach(image => generateImage(image));
 
   filter.change(() => {
     let selectedOption = filter.val();
     if (filter[0].selectedIndex < $('#filter option').length - 4) {
-      Object.values($('.image')).forEach(image => {
-        if (selectedOption === 'default') {
-          $(image).show();
-        } else if ($(image).attr('data-keyword') !== $('#filter option:selected').text() && filter[0].selectedIndex < $('#filter option').length - 4) {
-          $(image).hide();
-        } else {
-          $(image).show();
-        }
-      });
+      filterImages(selectedOption);
     } else {
       $('main').html('');
       sortImages(filter.val());
-      Image.all.forEach(image => generateImage(image));
+      Image.all.slice(...JSON.parse($(`[href='${window.location.hash}']`).attr('data-images'))).forEach(image => generateImage(image));
     }
   });
 });
