@@ -25,19 +25,17 @@ main {
   overflow: auto;
   padding: 20px;
   margin-top: 100px;
-  text-align: center;
 }
 
 .image {
-  width: calc(33.33% - 30px);
-  height: 500px;
+  /* height: 550px;
+  width: 400px;
   box-sizing: border-box;
-  float: left;
   margin: 15px;
-
   border-radius: 3px;
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   transition: transform 400ms ease-out;
+  background: #eee; */
 }
 
 .image h2 {
@@ -48,17 +46,27 @@ main {
   line-height: 50px;
   margin-bottom: 10px;
   letter-spacing: 1.1px;
+  max-width: 250px;
+  margin: 10px auto;
+  display: none;
 }
 
 img {
   height: 350px;
   width: 350px;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  transition: transform 400ms ease-out;
+  margin: 20px;
+  cursor: pointer;
 }
-
 .image p {
   box-sizing: inherit;
   padding: 5px 15px 0;
   font-size: 1.2em;
   height: 100px;
   line-height: 1.4em;
+  display: block;
+  max-width: 350px;
+  margin: 0 auto;
+  display: none;
 }

@@ -14,6 +14,15 @@
       href="https://fonts.googleapis.com/css?family=Righteous"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+    <script id="image-template" type="text/x-handlebars-template">
+      <section class="image">
+        <h2>{{title}}</h2>
+        <img src="{{image_url}}"/>
+        <p>{{description}}</p>
+        <!-- <p># Of Horns: {{horns}}</p> -->
+      </section>
+    </script>
   </head>
   <body>
     <header>
@@ -30,7 +39,7 @@
         </optgroup>
       </select>
     </header>
-    <main>
+    <main class="flex">
       <!-- Images go here -->
     </main>
     <footer>
