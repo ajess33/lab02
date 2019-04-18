@@ -45,3 +45,39 @@ Start time:
 Finish time:
 
 Actual time needed to complete:
+
+---
+
+Number and name of feature: Pagination
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+---
+
+Number and name of feature: Templating
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+---
+
+Number and name of feature: Styling With Flexbox
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
