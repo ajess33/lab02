@@ -30,6 +30,7 @@ const generateImage = (image) => {
   const templateScript = Handlebars.compile(template);
 
   const imageData = {
+    data_keyword: image.keyword,
     title: image.title,
     image_url: image.imageUrl,
     description: image.description,
